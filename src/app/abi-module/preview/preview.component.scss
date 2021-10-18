@@ -45,7 +45,8 @@
   height: 137.9999852843601px;
   width: 344.66720716711006px;
   border-radius: 6px;
-  padding: 12px;
+  //   padding: 12px;
+  padding: 12px 0px;
   //   background: white;
 
   /* Nikita/white */
@@ -123,9 +124,25 @@
   font-weight: 500;
   font-size: 13px;
   line-height: 20px;
-  color: #6D4CD9;
+  
   padding: 12px 7px;
 }
+
+.req_stat_compl {
+  background: linear-gradient(0deg, rgba(16, 185, 129, 0.11), rgba(16, 185, 129, 0.11)), #FFFFFF;
+  border-radius: 6px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+  color: #10B981;
+}
+
+.req_stat_req {
+  background: linear-gradient(0deg, rgba(109, 76, 217, 0.1), rgba(109, 76, 217, 0.1)), #FFFFFF;
+  border-radius: 6px;
+  transform: rotate(-0.11deg);
+  color: #6D4CD9;
+}
+
+
 
 .chat_sec {
   background: #FFFFFF;
@@ -133,14 +150,15 @@
   border-radius: 6px;
   transform: matrix(1, 0, 0, 1, 0, 0);
   min-height: 300px;
+  width: 344.6672071671px;
 }
 
 .sub_l {
-    border-bottom: 1px solid lightgrey;
-    height: 100%;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
+  border-bottom: 1px solid lightgrey;
+  height: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
 .chat_t {
