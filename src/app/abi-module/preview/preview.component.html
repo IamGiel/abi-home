@@ -22,7 +22,7 @@
                   MI Report
                 </div>
                 <div class="req-container">
-                  <span class="requested" [ngClass]="{'req_stat_compl':project.status === 'completed', 'req_stat_req':project.status === 'requested'}">{{project.status}}</span>
+                  <span class="requested" [ngClass]="{'req_stat_compl':project.status === 'completed', 'req_stat_req':project.status === 'requested'}">{{project.status | titlecase}}</span>
                 </div>
               </div>
               <div class="sub-items" style="position: relative;opacity: 0.2;">
@@ -54,7 +54,7 @@
      
     </div>
 
-    <div class="prev_col latest sub chat_sec">
+    <div class="prev_col latest chat_sec">
       <div class="sub_l" *ngFor="let chat of chats | slice:0:3; let i=index">
         <!-- "chatid":234,
         "date":'09 Sep 2023',
@@ -64,7 +64,10 @@
         </div>
         <div class="chat_b">
           <span>{{chat.date}}</span>
-          <span>{{chat.module}}</span>
+          <div class="module-container requested" [ngClass]="{'mod_status_complete':chat.status === 'completed', 'mod_status_pending':chat.status === 'pending'}">
+            <span>{{chat.module}}</span>  
+          </div>
+          
         </div>
 
 

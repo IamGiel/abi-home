@@ -113,19 +113,18 @@
 }
 
 .req-container {
-  background: linear-gradient(0deg, rgba(109, 76, 217, 0.1), rgba(109, 76, 217, 0.1)), #FFFFFF;
+//   background: linear-gradient(0deg, rgba(109, 76, 217, 0.1), rgba(109, 76, 217, 0.1)), #FFFFFF;
   border-radius: 6px;
   transform: rotate(-0.11deg);
 }
 
 .requested {
-  font-family: Inter;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 13px;
-  line-height: 20px;
-  
-  padding: 12px 7px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 18px;
+    padding: 1px 7px;
 }
 
 .req_stat_compl {
@@ -149,16 +148,18 @@
   box-shadow: 0px 1px 3px rgb(0 0 0 / 10%), 0px 1px 2px rgb(0 0 0 / 6%);
   border-radius: 6px;
   transform: matrix(1, 0, 0, 1, 0, 0);
-  min-height: 300px;
+//   min-height: 300px;
+  height: fit-content;
   width: 344.6672071671px;
 }
 
 .sub_l {
-  border-bottom: 1px solid lightgrey;
-  height: 100%;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
+    border-bottom: 1px solid lightgrey;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    gap: 20px;
 }
 
 .chat_t {
@@ -175,4 +176,25 @@
   font-weight: 500;
   font-size: 13px;
   line-height: 19px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+img {
+    opacity: 0.2!important;
+}
+.mod_status_complete {
+    background: linear-gradient(0deg, #ECFDF5, #ECFDF5), #FFFFFF;
+border-radius: 6px;
+transform: matrix(1, 0, 0, 1, 0, 0);
+color: #10B981;
+}
+.mod_status_pending {
+    background: linear-gradient(0deg, #FEF3C7, #FEF3C7), #FFFFFF;
+    border-radius: 6px;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+    color: #92400E;
 }

@@ -10,32 +10,38 @@ export class PreviewComponent implements OnInit {
     {
       "chatid":123,
       "date":'09 Sep 2023',
-      "module":"Supplier Intelligence"
+      "module":"Supplier Intelligence",
+      "status":"completed"
     },
     {
       "chatid":234,
       "date":'09 Sep 2023',
-      "module":"Supplier Intelligence"
+      "module":"Supplier Intelligence",
+      "status":"completed"
     },
     {
       "chatid":345,
       "date":'09 Sep 2023',
-      "module":"Pending"
+      "module":"Pending",
+      "status":"pending"
     },
     {
       "chatid":123,
       "date":'09 Sep 2023',
-      "module":"Supplier Intelligence"
+      "module":"Supplier Intelligence",
+      "status":"completed"
     },
     {
       "chatid":234,
       "date":'09 Sep 2023',
-      "module":"Supplier Intelligence"
+      "module":"Supplier Intelligence",
+      "status":"completed"
     },
     {
       "chatid":345,
       "date":'09 Sep 2023',
-      "module":"Pending"
+      "module":"Pending",
+      "status":"completed"
     }
   ];
   projects = [
