@@ -70,6 +70,32 @@ export class PreviewComponent implements OnInit {
       "status":"completed"
     }
   ];
+  files = [
+    {
+      "chatid":123,
+      "date":'09 Sep 2023',
+      "name":"Powerpoint-doc.ppt",
+      "type":"ppt"
+    },
+    {
+      "chatid":234,
+      "date":'09 Sep 2023',
+      "name":"Excel-doc.xml",
+      "type":"xml"
+    },
+    {
+      "chatid":123,
+      "date":'09 Sep 2023',
+      "name":"Document-word.doc",
+      "type":"doc"
+    },
+    {
+      "chatid":234,
+      "date":'09 Sep 2023',
+      "name":"Powerpoint-doc.ppt",
+      "type":"ppt"
+    }
+  ];
   constructor() { }
 
   ngOnInit(): void {}

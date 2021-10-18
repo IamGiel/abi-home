@@ -22,22 +22,25 @@
                   MI Report
                 </div>
                 <div class="req-container">
-                  <span class="requested" [ngClass]="{'req_stat_compl':project.status === 'completed', 'req_stat_req':project.status === 'requested'}">{{project.status | titlecase}}</span>
+                  <span class="requested"
+                    [ngClass]="{'req_stat_compl':project.status === 'completed', 'req_stat_req':project.status === 'requested'}">{{project.status | titlecase}}</span>
                 </div>
               </div>
-              <div class="sub-items" style="position: relative;opacity: 0.2;">
-                <img style="position: absolute;" src="../../../assets/img/three_dot_vert.svg" alt="">
+              <div class="sub-items" style="position: relative;">
+                <img style="position: absolute;" id="dots" src="../../../assets/img/three_dot_vert.svg" alt="">
               </div>
             </div>
             <div class="row-up-sub" style="display: flex;flex-direction: row;padding-left: 16px!important;">
               <div class="sub-items si-u">
-                <img src="../../../assets/img/calendar.svg" alt="calendar">
+                <img src="../../../assets/img/calendar.svg"
+                  style="filter: invert(86%) sepia(1%) saturate(12%) hue-rotate(92deg) brightness(64%) contrast(148%);"
+                  alt="calendar">
               </div>
               <div class="sub-items si-u">
                 <span id="date">{{project.date}}</span>
               </div>
               <div class="sub-items si-u">
-                <img src="../../../assets/img/person.svg" alt="person">
+                <img src="../../../assets/img/user.svg" alt="user">
               </div>
               <div class="sub-items si-u">
                 <span id="date">{{project.name}}</span>
@@ -51,7 +54,9 @@
         </div>
         <button class="lower">View Request</button>
       </div>
-     
+      <div class="submit-btn-o">
+          <button class="start-btn">View More</button>
+      </div>
     </div>
 
     <div class="prev_col latest chat_sec">
@@ -60,21 +65,61 @@
         "date":'09 Sep 2023',
         "module":"Supplier Intelligence" -->
         <div class="chat_t">
-          <span>Chat #{{chat.chatid}}</span>
+          <div style="flex-grow: 1">
+            <span>Chat #{{chat.chatid}}</span>
+          </div>
+          <div class="sub-items" style="position: relative;">
+            <img style="position: absolute;" id="dots" src="../../../assets/img/horiz_dots.svg" alt="horiz">
+          </div>
         </div>
         <div class="chat_b">
           <span>{{chat.date}}</span>
-          <div class="module-container requested" [ngClass]="{'mod_status_complete':chat.status === 'completed', 'mod_status_pending':chat.status === 'pending'}">
-            <span>{{chat.module}}</span>  
+          <div class="module-container requested"
+            [ngClass]="{'mod_status_complete':chat.status === 'completed', 'mod_status_pending':chat.status === 'pending'}">
+            <span>{{chat.module}}</span>
           </div>
-          
+
         </div>
 
 
       </div>
+      <div class="submit-btn">
+          <button class="start-btn">View More</button>
+      </div>
     </div>
-    <div class="prev_col files sub">
 
+    <div class="prev_col latest chat_sec">
+      <div class="sub_f" *ngFor="let file of files | slice:0:3; let i=index">
+        <!-- "chatid":234,
+          "date":'09 Sep 2023',
+          "module":"Supplier Intelligence" -->
+        <div class="sub-items si_dot" >
+          <img style="position: absolute;" id="dots" src="../../../assets/img/horiz_dots.svg" alt="horiz">
+        </div>
+        <div class="chat_t">
+          <div class="file_type">
+            <img *ngIf="file.type=='ppt'" src="../../../assets/img/filetype_ppt.svg" alt="ppt">
+            <img *ngIf="file.type=='doc'" src="../../../assets/img/filetype_doc.svg" alt="doc">
+            <img *ngIf="file.type=='xml'" src="../../../assets/img/filetype_xml.svg" alt="xml">
+          </div>
+
+        </div>
+        <div class="chat_f">
+          <span>{{file.name}}</span>
+          <div class="file_det">
+            <div><span>{{file.date}}</span></div>
+            <div
+              [ngClass]="{'file_type-xml':file.type === 'xml', 'file_type-doc':file.type === 'doc', 'file_type-ppt':file.type === 'ppt'}">
+              <span>{{file.type}}</span></div>
+          </div>
+
+        </div>
+      </div>
+      <div class="submit-btn">
+          <button class="start-btn">View More</button>
+      </div>
     </div>
+
+
   </div>
 </div>
