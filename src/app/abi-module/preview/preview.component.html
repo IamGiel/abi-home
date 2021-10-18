@@ -1,0 +1,114 @@
+<div class="prev-main-container">
+  <div class="preview-container">
+    <div class="prev_col custom">
+      <p>Custom Projects</p>
+    </div>
+    <div class="prev_col latest">
+      <p>Latest Chats</p>
+    </div>
+    <div class="prev_col files">
+      <p>Files</p>
+    </div>
+  </div>
+
+  <div class="preview-container-sub">
+    <div class="prev_col custom sub">
+      <div class="sub_c">
+        <div class="upper">
+          <div class="col-up-sub" style="display: flex;flex-direction: column;">
+            <div class="row-up-sub" style="display: flex;flex-direction: row;">
+              <div class="sub-items" style="flex-grow: 1;">
+                <div>
+                  MI Report
+                </div>
+                <div class="req-container">
+                  <span class="requested">Requested</span>
+                </div>
+              </div>
+              <div class="sub-items" style="position: relative;opacity: 0.2;">
+                <img style="position: absolute;" src="../../../assets/img/three_dot_vert.svg" alt="">
+              </div>
+            </div>
+            <div class="row-up-sub" style="display: flex;flex-direction: row;padding-left: 16px!important;">
+              <div class="sub-items si-u">
+                <img src="../../../assets/img/calendar.svg" alt="calendar">
+              </div>
+              <div class="sub-items si-u">
+                <span id="date">07 Sep 2023</span>
+              </div>
+              <div class="sub-items si-u">
+                <img src="../../../assets/img/person.svg" alt="person">
+              </div>
+              <div class="sub-items si-u">
+                <span id="date">Alexander TheGreat</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-up-sub">
+            <div class="row-up-sub"></div>
+            <div class="row-up-sub"></div>
+          </div>
+        </div>
+        <button class="lower">View Request</button>
+      </div>
+      <div class="sub_c">
+        <div class="upper">
+          <div class="col-up-sub" style="display: flex;flex-direction: column;">
+            <div class="row-up-sub" style="display: flex;flex-direction: row;">
+              <div class="sub-items" style="flex-grow: 1;">
+                <div>
+                  MI Report
+                </div>
+                <div class="req-container">
+                  <span class="requested">Requested</span>
+                </div>
+              </div>
+              <div class="sub-items" style="position: relative;opacity: 0.2;">
+                <img style="position: absolute;" src="../../../assets/img/three_dot_vert.svg" alt="">
+              </div>
+            </div>
+            <div class="row-up-sub" style="display: flex;flex-direction: row;padding-left: 16px!important;">
+              <div class="sub-items si-u">
+                <img src="../../../assets/img/calendar.svg" alt="calendar">
+              </div>
+              <div class="sub-items si-u">
+                <span id="date">07 Sep 2023</span>
+              </div>
+              <div class="sub-items si-u">
+                <img src="../../../assets/img/person.svg" alt="person">
+              </div>
+              <div class="sub-items si-u">
+                <span id="date">Alexander TheGreat</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-up-sub">
+            <div class="row-up-sub"></div>
+            <div class="row-up-sub"></div>
+          </div>
+        </div>
+        <button class="lower">View Request</button>
+      </div>
+    </div>
+
+    <div class="prev_col latest sub chat_sec">
+      <div class="sub_l" *ngFor="let chat of chats">
+        <!-- "chatid":234,
+        "date":'09 Sep 2023',
+        "module":"Supplier Intelligence" -->
+        <div class="chat_t">
+          <span>Chat #{{chat.chatid}}</span>
+        </div>
+        <div class="chat_b">
+          <span>{{chat.date}}</span>
+          <span>{{chat.module}}</span>
+        </div>
+
+
+      </div>
+    </div>
+    <div class="prev_col files sub">
+
+    </div>
+  </div>
+</div>

@@ -1,8 +1,17 @@
 ABI MODULE
 |
 ---- abi-module
-    |----abi component
-    
+    |
+    ----abi-component (router-outlet)
+        |
+        ----abi home
+        |
+        ----files
+        |
+        ----preview
+        |
+        ----reports
+
 
 
 

@@ -5,12 +5,18 @@ import { RouterModule } from '@angular/router';
 import { AbiRoute } from './abi-routing.route';
 import { AbiHomeComponent } from './abi-home/abi-home.component';
 import { AbiComponent } from './abi.component';
+import { ReportsComponent } from './reports/reports.component';
+import { FilesComponent } from './files/files.component';
+import { PreviewComponent } from './preview/preview.component';
 
 
 @NgModule({
   declarations: [
     AbiHomeComponent,
-    AbiComponent
+    AbiComponent,
+    ReportsComponent,
+    FilesComponent,
+    PreviewComponent
     
   ],
   imports: [

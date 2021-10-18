@@ -15,7 +15,11 @@
     right: 0;
     left: 0;
     overflow: hidden;
-    height: 100vh;
+    // height: 100vh;
+    height: 100%;
+
+    background: linear-gradient(315deg, #544AD8 0%, #804CD9 100%);
+
 }
 
 .main-container {
@@ -32,6 +36,36 @@
 .router-outlet-section {
     padding: 20px;
     width: 100%;
+    min-width: 1280px;
     height: 100vh;
 }
+.bot_img{
+    cursor: pointer;
+    z-index: 2;
+    margin: 0 auto;
+    margin-top: 24px;
+    position: relative;
+    // padding: 12px;
+    top: 0px;
+    display: flex;
+}
+.ailogo {
+    height: 56px;
+    transform: rotate(
+-90deg
+);
+    margin-bottom: 140px;
+    position: absolute;
+    bottom: 0px;
+    left: -20px;
+  }
 
+
+// NAVS
+// navs
+.navbar-light .navbar-nav .nav-link {
+    color: #a4a3a3!important;
+}
+.navbar-light .navbar-nav .show > .nav-link, .navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .nav-link.active {
+    color: white!important;
+}

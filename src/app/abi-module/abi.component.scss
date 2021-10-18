@@ -1,0 +1,47 @@
+.nav-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.nav-subcontainer {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+}
+
+.nav-sub-inner {
+  flex-grow: 1;
+  display: flex;
+}
+
+.nav-btns {
+  margin: 0px 12px 0px 12px;
+  padding: 4px 4px;
+  // border: 1px solid grey;
+  cursor: pointer;
+  padding: 8px 12px 8px 12px;
+
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.active_navs {
+  color: #7535C0;
+  background: #E5D7F3;
+  height: 36px;
+  width: auto;
+  min-width: 56px;
+  left: 0px;
+  top: 0px;
+  border-radius: 6px;
+
+
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+}

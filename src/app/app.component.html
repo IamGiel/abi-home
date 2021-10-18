@@ -2,33 +2,41 @@
   <div class="nav-section">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <!-- <a class="navbar-brand" href="#">Navbar</a> -->
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-    <!-- <h1>  {{selected}}</h1> -->
+      <!-- <h1>  {{selected}}</h1> -->
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav flex-column" >
+        <ul class="navbar-nav flex-column">
           <li class="nav-item" [ngClass]="{active: selected === 'home'}">
-            <a class="nav-link" (click)="goToRoute('home')">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item" [ngClass]="{active: selected === 'abi'}" style="cursor: pointer;">
-            <a class="nav-link" (click)="goToRoute('abi')" >Abi</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Dropdown
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Something else here</a>
+            <!-- <a class="nav-link" (click)="goToRoute('home')">Home <span class="sr-only">(current)</span></a> -->
+            <div style="margin: 12px 0px;">
+              <img class="bot_img" src="../assets/img/botImage.svg"
+                (click)="goToRoute('abi')" />
             </div>
           </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#">Disabled</a>
+          <li class="nav-item" [ngClass]="{active: selected === 'home'}" style="cursor: pointer;">
+            <a class="nav-link" (click)="goToRoute('home')">Dashoard</a>
+          </li>
+          <li class="nav-item" [ngClass]="{active: selected === 'category'}" style="cursor:not-allowed;">
+            <a class="nav-link" (click)="goToRoute('xcategory')">Category</a>
+          </li>
+          <li class="nav-item" [ngClass]="{active: selected === 'supplier'}" style="cursor:not-allowed;">
+            <a class="nav-link" (click)="goToRoute('xsupplier')">Supplier</a>
+          </li>
+          <li class="nav-item" [ngClass]="{active: selected === 'shortlist'}" style="cursor:not-allowed;">
+            <a class="nav-link" (click)="goToRoute('xshortlist')">Shortlist</a>
+          </li>
+
+          <li class="nav-item" [ngClass]="{active: selected === 'wtp'}"  style="cursor:not-allowed;">
+            <a class="nav-link disabled" (click)="goToRoute('xwtp')">WTP</a>
           </li>
         </ul>
+        <div class="nav_logo" (click)="goToRoute('home')">
+          <img style="cursor:pointer" class="ailogo" src="../assets/img/Beroe LiVE Ai White.svg"
+              alt="ABILOGO" />
+      </div>
         <!-- <form class="form-inline my-2 my-lg-0">
           <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
           <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
@@ -40,7 +48,3 @@
     <router-outlet></router-outlet>
   </div>
 </div>
-
-
-
-
