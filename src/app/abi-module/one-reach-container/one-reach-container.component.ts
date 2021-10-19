@@ -23,4 +23,6 @@ export class OneReachContainerComponent implements OnInit {
     this.urlSafe = this.sanitizer.bypassSecurityTrustResourceUrl(this.url + `?token=${this.test_token}` + `?message=${localStorage.getItem('message_to_onereach')}`)
   }
 
+  
+
 }
