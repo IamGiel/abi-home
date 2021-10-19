@@ -24,7 +24,43 @@ export class AbiChatComponent implements OnInit {
     {
       "chatid":345,
       "date":'09 Sep 2023',
-      "module":"Pending",
+      "module":"Global Data",
+      "status":"pending"
+    },
+    {
+      "chatid":123,
+      "date":'09 Sep 2023',
+      "module":"Market Intelligence",
+      "status":"completed"
+    },
+    {
+      "chatid":234,
+      "date":'09 Sep 2023',
+      "module":"Supplier Intelligence",
+      "status":"completed"
+    },
+    {
+      "chatid":345,
+      "date":'09 Sep 2023',
+      "module":"Global Data",
+      "status":"completed"
+    },
+    {
+      "chatid":123,
+      "date":'09 Sep 2023',
+      "module":"Supplier Intelligence",
+      "status":"completed"
+    },
+    {
+      "chatid":234,
+      "date":'09 Sep 2023',
+      "module":"Supplier Intelligence",
+      "status":"completed"
+    },
+    {
+      "chatid":345,
+      "date":'09 Sep 2023',
+      "module":"Global Data",
       "status":"pending"
     },
     {
@@ -36,50 +72,14 @@ export class AbiChatComponent implements OnInit {
     {
       "chatid":234,
       "date":'09 Sep 2023',
-      "module":"Supplier Intelligence",
-      "status":"completed"
+      "module":"Market Intelligence",
+      "status":"ended"
     },
     {
       "chatid":345,
       "date":'09 Sep 2023',
-      "module":"Pending",
-      "status":"completed"
-    },
-    {
-      "chatid":123,
-      "date":'09 Sep 2023',
-      "module":"Supplier Intelligence",
-      "status":"completed"
-    },
-    {
-      "chatid":234,
-      "date":'09 Sep 2023',
-      "module":"Supplier Intelligence",
-      "status":"completed"
-    },
-    {
-      "chatid":345,
-      "date":'09 Sep 2023',
-      "module":"Pending",
-      "status":"pending"
-    },
-    {
-      "chatid":123,
-      "date":'09 Sep 2023',
-      "module":"Supplier Intelligence",
-      "status":"completed"
-    },
-    {
-      "chatid":234,
-      "date":'09 Sep 2023',
-      "module":"Supplier Intelligence",
-      "status":"completed"
-    },
-    {
-      "chatid":345,
-      "date":'09 Sep 2023',
-      "module":"Pending",
-      "status":"completed"
+      "module":"Global Data",
+      "status":"ended"
     }
   ];
   constructor(

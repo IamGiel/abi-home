@@ -3,29 +3,44 @@
     <div class="nav-sub-inner">
       <div class="tsec">
         <div class="col-list-t">
-            <div class="nav-btns" [ngClass]="{'active_navs': selected_nav == 'chat'}" (click)="goChat('chat')">Chat</div>
-            <div class="nav-btns" [ngClass]="{'active_navs': selected_nav == 'reports'}" (click)="goChat('reports')">Report
-            </div>
-            <div class="nav-btns" [ngClass]="{'active_navs': selected_nav == 'files'}" (click)="goChat('files')">Files</div>
-            <div class="nav-btns" [ngClass]="{'active_navs': selected_nav == 'files'}" (click)="goChat('files')">Sort <span style="position: relative;"><img id="cdown" src="../../../assets/img/chevron-down.svg" alt="chevron-down"></span></div>
+          <div class="nav-btns" [ngClass]="{'active_navs': selected_nav == 'chat'}" (click)="goChat('chat')">Chat</div>
+          <div class="nav-btns" [ngClass]="{'active_navs': selected_nav == 'reports'}" (click)="goChat('reports')">
+            Report
+          </div>
+          <div class="nav-btns" [ngClass]="{'active_navs': selected_nav == 'files'}" (click)="goChat('files')">Files
+          </div>
+          <div class="nav-btns" [ngClass]="{'active_navs': selected_nav == 'files'}" (click)="goChat('files')">Sort
+            <span style="position: relative;"><img id="cdown" src="../../../assets/img/chevron-down.svg"
+                alt="chevron-down"></span></div>
         </div>
         <div class="col-list">
-            <div class="chat-item-container" *ngFor="let chat of chats">
-                <div class="row_l">
-                    <div class="row_sub_l">asdasd</div>
-                    <div class="row_sub_l">123</div>
+          <div class="chat-item-container" *ngFor="let chat of chats">
+            <div class="row_l">
+                <div class="row_sub_l">
+                    <span class="dot_sp">
+                        <div class="theDot"></div>
+                    </span>
+                <p class="ch_id">Chat #{{chat.chatid}}</p> 
                 </div>
-                
-                <div class="row_r">
-                    <div class="row_sub_l">--</div>
-                    <div class="row_sub_l">cccccc</div>
+                <div class="row_sub_l">
+                    <p class="ch_dt">{{chat.date}}</p>
                 </div>
             </div>
+
+            <div class="row_r">
+                <div class="row_sub_l">
+                    
+                </div>
+                <div class="row_sub_l ch_stat" [ngClass]="{'ch_status-comp':chat.status === 'completed', 'ch_status-pen':chat.status === 'pending', 'ch_status-term':chat.status === 'ended'}">
+                    <p class="ch_dt_m">{{chat.module}}</p>
+                </div>
+            </div>
+          </div>
         </div>
       </div>
-      
+
       <div class="sub-con onereach_container">
-        
+
       </div>
     </div>
 

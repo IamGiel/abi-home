@@ -1,77 +1,181 @@
 .nav-sub-inner {
-    flex-grow: 1;
-    display: flex;
-  }
+  flex-grow: 1;
+  display: flex;
+}
 
-  .nav-btns {
-    margin: 0px 12px 0px 12px;
-    padding: 4px 4px;
-    // border: 1px solid grey;
-    cursor: pointer;
-    padding: 8px 12px 8px 12px;
-  
-    font-family: Inter;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 20px;
-  }
-  
-  .active_navs {
-    color: #7535C0;
-    background: #E5D7F3;
-    height: 36px;
-    width: auto;
-    min-width: 56px;
-    left: 0px;
-    top: 0px;
-    border-radius: 6px;
-  
-  
-    font-family: Inter;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 20px;
-  }
-  .sub-con {
-    display: flex;
-    flex-direction: row;
-  }
-  #cdown {
-    vertical-align: middle;
-    border-style: none;
-    height: 13.3889088631px;
-    width: 11.3030166626px;
-    left: 8px;
-    top: 3px;
-    border-radius: 0px;
-    position: absolute;
-  }
+.nav-btns {
+  margin: 0px 12px 0px 12px;
+  padding: 4px 4px;
+  // border: 1px solid grey;
+  cursor: pointer;
+  padding: 8px 12px 8px 12px;
 
-  .tsec {
-    // border-bottom: 1px solid lightgrey;
-    padding-bottom: 12px; 
-    display: flex;
-    flex-direction: column;
-  }
-  .col-list-t {
-    display: flex;
-    border-bottom: 1px solid;
-    border-color: lightgrey;
-    padding-bottom: 12px;
-  }
-  .col-list {
-    max-height: 100vh;
-    overflow-x: hidden;
-  }
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+}
 
-  .chat-item-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    position: relative;
-    padding: 12px 35px;
-    border-bottom: 1px solid lightgrey;
-  }
-  
+.active_navs {
+  color: #7535C0;
+  background: #E5D7F3;
+  height: 36px;
+  width: auto;
+  min-width: 56px;
+  left: 0px;
+  top: 0px;
+  border-radius: 6px;
+
+
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.sub-con {
+  display: flex;
+  flex-direction: row;
+}
+
+#cdown {
+  vertical-align: middle;
+  border-style: none;
+  height: 13.3889088631px;
+  width: 11.3030166626px;
+  left: 8px;
+  top: 3px;
+  border-radius: 0px;
+  position: absolute;
+}
+
+.tsec {
+  // border-bottom: 1px solid lightgrey;
+  padding-bottom: 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+.col-list-t {
+  display: flex;
+  border-bottom: 1px solid;
+  border-color: lightgrey;
+  padding-bottom: 12px;
+}
+
+.col-list {
+  max-height: 919px;
+  overflow-x: hidden;
+}
+
+.chat-item-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  position: relative;
+  padding: 12px 35px;
+  border-bottom: 1px solid lightgrey;
+}
+
+.row_l {
+  margin-right: 34px;
+}
+
+.row_r {
+  display: flex;
+  justify-content: end;
+  flex-direction: column-reverse;
+}
+
+.row_sub_l {
+  position: relative;
+
+}
+
+.ch_id {
+  font-family: Inter;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 19px;
+  letter-spacing: 0px;
+  text-align: left;
+
+}
+
+.ch_dt, .ch_dt_m {
+  font-family: Inter;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 19px;
+  letter-spacing: 0px;
+  text-align: left;
+
+  position: relative;
+  bottom: -10px;
+
+}
+
+.ch_dt_m {
+    padding: 0px 12px;
+
+}
+
+
+.ch_md {
+  font-family: Inter;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: left;
+
+
+}
+
+.dot_sp {
+  position: absolute;
+  left: -23px;
+  top: -4px;
+}
+
+.theDot {
+  height: 9px;
+  width: 9px;
+  background: rgba(16, 185, 129, 1);
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.ch_stat {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 20px;
+
+  position: relative;
+//   top: -10px;
+}
+
+.ch_status-comp {
+  color: #00BA34;
+  background: linear-gradient(0deg, #ECFDF5, #ECFDF5), #FFFFFF;
+  border-radius: 6px;
+}
+
+.ch_status-pen {
+  color: #92400E;
+  background: linear-gradient(0deg, #FEF3C7, #FEF3C7), #FFFFFF;
+  border-radius: 6px;
+}
+
+.ch_status-term {
+  color: #EF4444;
+  background: linear-gradient(0deg, rgba(239, 68, 68, 0.1), rgba(239, 68, 68, 0.1)), #FFFFFF;
+  border-radius: 6px;
+}
