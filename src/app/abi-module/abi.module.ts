@@ -8,6 +8,7 @@ import { AbiComponent } from './abi.component';
 import { ReportsComponent } from './reports/reports.component';
 import { FilesComponent } from './files/files.component';
 import { PreviewComponent } from './preview/preview.component';
+import { AbiChatComponent } from './abi-chat/abi-chat.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { PreviewComponent } from './preview/preview.component';
     AbiComponent,
     ReportsComponent,
     FilesComponent,
-    PreviewComponent
+    PreviewComponent,
+    AbiChatComponent
     
   ],
   imports: [

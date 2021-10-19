@@ -1,4 +1,5 @@
 import {Route} from '@angular/router';
+import { AbiChatComponent } from './abi-chat/abi-chat.component';
 import { AbiHomeComponent } from './abi-home/abi-home.component';
 import { AbiComponent } from './abi.component';
 import { FilesComponent } from './files/files.component';
@@ -18,6 +19,7 @@ export const AbiRoute: Route[] = [
         path: 'chat',
         component: AbiHomeComponent
      },
+     
       {
         path: 'reports',
         component: ReportsComponent
@@ -28,9 +30,9 @@ export const AbiRoute: Route[] = [
    }
   ]
   },
-  // {
-  //   path: 'abi-ai/chat',
-  //   component: AbiHomeComponent
-  // }
+  {
+   path: 'chat-rm',
+   component: AbiChatComponent
+},
 
 ];

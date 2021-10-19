@@ -1,0 +1,12 @@
+<div class="nav-container">
+    <div class="nav-subcontainer">
+      <div class="nav-sub-inner">
+        <div class="nav-btns" [ngClass]="{'active_navs': selected_nav == 'chat'}" (click)="goChat('chat')" >Chat</div>
+        <div class="nav-btns" [ngClass]="{'active_navs': selected_nav == 'reports'}" (click)="goChat('reports')">Report</div>
+        <div class="nav-btns" [ngClass]="{'active_navs': selected_nav == 'files'}" (click)="goChat('files')">Files</div>
+      </div>
+      <div>
+        <div class="nav-btns">Sort</div>
+      </div>
+    </div>
+  </div>

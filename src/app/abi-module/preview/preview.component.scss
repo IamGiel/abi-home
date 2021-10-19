@@ -29,7 +29,7 @@
 
 .preview-container-sub {
   background-color: #EDEDED;
-//   min-height: 350px;
+  //   min-height: 350px;
   padding-top: 40px;
   padding-bottom: 40px;
   min-height: 450px;
@@ -217,10 +217,11 @@ img {
   gap: 20px;
   position: relative;
 }
+
 .si_dot {
-    position: absolute;
-    right: 9px;
-    top: 20px;
+  position: absolute;
+  right: 9px;
+  top: 20px;
 }
 
 .chat_f {
@@ -261,52 +262,65 @@ img {
   transform: matrix(1, 0, 0, 1, 0, 0);
 }
 
-.file_type-doc, .file_type-ppt, .file_type-xml {
-            height: 23.999999701711573px;
-            width: 40.00000127241188px;
-            left: 1065.2481689453125px;
-            top: 785.796142578125px;
-            border-radius: 6px;
-            padding: 2px 6px 2px 6px;
+.file_type-doc,
+.file_type-ppt,
+.file_type-xml {
+  height: 23.999999701711573px;
+  width: 40.00000127241188px;
+  left: 1065.2481689453125px;
+  top: 785.796142578125px;
+  border-radius: 6px;
+  padding: 2px 6px 2px 6px;
 }
+.file_type-doc {
+  color: rgba(39, 84, 155, 1);
+
+}
+.file_type-ppt {
+  color: rgba(234, 140, 0, 1);
+}
+.file_type-xml {
+  color: rgba(0, 186, 52, 1);
+}
+
 #dots {
-    filter: invert(86%) sepia(1%) saturate(12%) hue-rotate(
-        92deg
-        ) brightness(64%) contrast(148%)!important;
+  filter: invert(86%) sepia(1%) saturate(12%) hue-rotate(92deg) brightness(64%) contrast(148%) !important;
 }
 
 .submit-btn {
-    // display: flex;
-    // justify-content: flex-end;
-    position: absolute;
-    bottom: -60px;
-    right: 0px;
+  // display: flex;
+  // justify-content: flex-end;
+  position: absolute;
+  bottom: -60px;
+  right: 0px;
 }
-.submit-btn-o, .submit-btn {
-    display: flex;
-    justify-content: flex-end;
+
+.submit-btn-o,
+.submit-btn {
+  display: flex;
+  justify-content: flex-end;
 }
 
 .start-btn {
-    height: 38.00000014956283px;
-    width: 97.00000038177879px;
-    left: 1143px;
-    top: 853.84619140625px;
-    border-radius: 6px;
-    padding: 9px 12px;
-    
+  height: 38.00000014956283px;
+  width: 97.00000038177879px;
+  left: 1143px;
+  top: 853.84619140625px;
+  border-radius: 6px;
+  padding: 9px 12px;
 
-    background: #4F46E5;
-    color: white;
-    border: none;
 
-    //styleName: text-sm/leading-5/font-medium;
-font-family: Inter;
-font-size: 14px;
-font-style: normal;
-font-weight: 500;
-line-height: 20px;
-letter-spacing: 0em;
-text-align: left;
+  background: #4F46E5;
+  color: white;
+  border: none;
+
+  //styleName: text-sm/leading-5/font-medium;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: left;
 
 }
