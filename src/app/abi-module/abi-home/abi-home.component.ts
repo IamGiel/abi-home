@@ -30,7 +30,8 @@ export class AbiHomeComponent implements OnInit {
   }
   onSubmit(): void {
     // Process checkout data here
-    console.warn('Your order has been submitted', this.checkoutForm.value);
+    console.warn('Your order has been submitted', this.checkoutForm.value.query);
+    localStorage.setItem("message_to_onereach", this.checkoutForm.value.query)
     this.router.navigate(['/chat-rm']);
     this.checkoutForm.reset();
   }
