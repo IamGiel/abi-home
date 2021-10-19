@@ -9,7 +9,9 @@ import { ReportsComponent } from './reports/reports.component';
 import { FilesComponent } from './files/files.component';
 import { PreviewComponent } from './preview/preview.component';
 import { AbiChatComponent } from './abi-chat/abi-chat.component';
+import { OneReachContainerComponent } from './one-reach-container/one-reach-container.component';
 
+import { TooltipModule } from 'ngx-bootstrap/tooltip';
 
 @NgModule({
   declarations: [
@@ -18,12 +20,14 @@ import { AbiChatComponent } from './abi-chat/abi-chat.component';
     ReportsComponent,
     FilesComponent,
     PreviewComponent,
-    AbiChatComponent
+    AbiChatComponent,
+    OneReachContainerComponent
     
   ],
   imports: [
     CommonModule,
     RouterModule.forChild(AbiRoute),
+    TooltipModule.forRoot()
   ],
   exports: [AbiComponent]
 

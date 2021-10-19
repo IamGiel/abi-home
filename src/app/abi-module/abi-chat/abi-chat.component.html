@@ -15,7 +15,7 @@
         </div>
         <div class="col-list">
           <div class="chat-item-container" *ngFor="let chat of chats">
-            <div class="row_l">
+            <div class="row_l" [tooltip]="chat.status" triggers="mouseenter:mouseleave">
                 <div class="row_sub_l">
                     <span class="dot_sp">
                         <div class="theDot"></div>
@@ -27,11 +27,11 @@
                 </div>
             </div>
 
-            <div class="row_r">
+            <div class="row_r" >
                 <div class="row_sub_l">
                     
                 </div>
-                <div class="row_sub_l ch_stat" [ngClass]="{'ch_status-comp':chat.status === 'completed', 'ch_status-pen':chat.status === 'pending', 'ch_status-term':chat.status === 'ended'}">
+                <div class="row_sub_l ch_stat" [ngClass]="{'ch_status-comp':chat.status === 'completed', 'ch_status-pen':chat.status === 'pending', 'ch_status-term':chat.status === 'ended'}" [tooltip]="chat.status" triggers="mouseenter:mouseleave">
                     <p class="ch_dt_m">{{chat.module}}</p>
                 </div>
             </div>
@@ -40,10 +40,7 @@
       </div>
 
       <div class="sub-con onereach_container">
-        <div class="one_col_top">
-            <p class="greet">This is Abi, your digital assistant</p>
-        </div>
-        <div class="one_col_bottom"></div>
+        <app-one-reach-container></app-one-reach-container>
       </div>
     </div>
 

@@ -1,0 +1,25 @@
+.onereach_container {
+    display: flex;
+    flex-direction: column;
+    width: 917px;
+}
+.one_col_top {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid;
+    border-color: lightgrey;
+    padding: 0px 28px 0px 28px;}
+.greet {
+    flex-grow: 1;
+}
+.greet_p {
+    font-family: Inter;
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 32px;
+}
+
+.cl {
+    cursor: pointer;
+}
