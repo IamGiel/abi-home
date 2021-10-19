@@ -10,6 +10,8 @@ import { FilesComponent } from './files/files.component';
 import { PreviewComponent } from './preview/preview.component';
 import { AbiChatComponent } from './abi-chat/abi-chat.component';
 import { OneReachContainerComponent } from './one-reach-container/one-reach-container.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 
@@ -27,7 +29,9 @@ import { TooltipModule } from 'ngx-bootstrap/tooltip';
   imports: [
     CommonModule,
     RouterModule.forChild(AbiRoute),
-    TooltipModule.forRoot()
+    TooltipModule.forRoot(),
+    FormsModule,
+    ReactiveFormsModule
   ],
   exports: [AbiComponent]
 

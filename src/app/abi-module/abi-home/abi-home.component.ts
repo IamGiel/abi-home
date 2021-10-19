@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { FormBuilder } from '@angular/forms';
+
 
 @Component({
   selector: 'app-abi-home',
@@ -8,17 +10,30 @@ import { Router } from '@angular/router';
 })
 export class AbiHomeComponent implements OnInit {
   query_:any;
+  checkoutForm = this.formBuilder.group({
+    query: '',
+  });
   constructor(
-    public router:Router
+    public router:Router,
+    private formBuilder: FormBuilder,
+
   ) { }
 
   ngOnInit(): void {
   }
 
   goChatRm(q:any){
+    q.preventDefault()
     console.log(q)
     localStorage.setItem("message_to_onereach", q)
-    this.router.navigate(['/chat-rm']);
+  
   }
+  onSubmit(): void {
+    // Process checkout data here
+    console.warn('Your order has been submitted', this.checkoutForm.value);
+    this.router.navigate(['/chat-rm']);
+    this.checkoutForm.reset();
+  }
+
 
 }

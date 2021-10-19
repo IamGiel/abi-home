@@ -5,9 +5,9 @@
         <img src="https://raw.githubusercontent.com/Selva1994/Host/main/Attention%403x.svg" alt="abi">
     </div>
     <p class="ch-now">Chat with Abi now</p>
-    <div style="position: relative;">
-        <input class="the-input" type="text" placeholder="Enter your query" #query> <button class="start-btn" (click)="goChatRm(query.value)">Start chat</button>
-    </div>
+    <form style="position: relative;" [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
+        <input class="the-input" type="text" formControlName="query" placeholder="Enter your query" #query> <button class="start-btn" type="submit">Start chat</button>
+    </form>
 </div>
 <div class="preview-container">
     <app-preview></app-preview>
