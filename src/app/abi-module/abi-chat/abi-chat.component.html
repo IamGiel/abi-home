@@ -1,12 +1,33 @@
 <div class="nav-container">
-    <div class="nav-subcontainer">
-      <div class="nav-sub-inner">
-        <div class="nav-btns" [ngClass]="{'active_navs': selected_nav == 'chat'}" (click)="goChat('chat')" >Chat</div>
-        <div class="nav-btns" [ngClass]="{'active_navs': selected_nav == 'reports'}" (click)="goChat('reports')">Report</div>
-        <div class="nav-btns" [ngClass]="{'active_navs': selected_nav == 'files'}" (click)="goChat('files')">Files</div>
+  <div class="nav-subcontainer">
+    <div class="nav-sub-inner">
+      <div class="tsec">
+        <div class="col-list-t">
+            <div class="nav-btns" [ngClass]="{'active_navs': selected_nav == 'chat'}" (click)="goChat('chat')">Chat</div>
+            <div class="nav-btns" [ngClass]="{'active_navs': selected_nav == 'reports'}" (click)="goChat('reports')">Report
+            </div>
+            <div class="nav-btns" [ngClass]="{'active_navs': selected_nav == 'files'}" (click)="goChat('files')">Files</div>
+            <div class="nav-btns" [ngClass]="{'active_navs': selected_nav == 'files'}" (click)="goChat('files')">Sort <span style="position: relative;"><img id="cdown" src="../../../assets/img/chevron-down.svg" alt="chevron-down"></span></div>
+        </div>
+        <div class="col-list">
+            <div class="chat-item-container" *ngFor="let chat of chats">
+                <div class="row_l">
+                    <div class="row_sub_l">asdasd</div>
+                    <div class="row_sub_l">123</div>
+                </div>
+                
+                <div class="row_r">
+                    <div class="row_sub_l">--</div>
+                    <div class="row_sub_l">cccccc</div>
+                </div>
+            </div>
+        </div>
       </div>
-      <div>
-        <div class="nav-btns">Sort</div>
+      
+      <div class="sub-con onereach_container">
+        
       </div>
     </div>
+
   </div>
+</div>

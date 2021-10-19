@@ -8,10 +8,82 @@ import { Router } from '@angular/router';
 })
 export class AbiChatComponent implements OnInit {
   selected_nav: any;
-
+  chats = [
+    {
+      "chatid":123,
+      "date":'09 Sep 2023',
+      "module":"Supplier Intelligence",
+      "status":"completed"
+    },
+    {
+      "chatid":234,
+      "date":'09 Sep 2023',
+      "module":"Supplier Intelligence",
+      "status":"completed"
+    },
+    {
+      "chatid":345,
+      "date":'09 Sep 2023',
+      "module":"Pending",
+      "status":"pending"
+    },
+    {
+      "chatid":123,
+      "date":'09 Sep 2023',
+      "module":"Supplier Intelligence",
+      "status":"completed"
+    },
+    {
+      "chatid":234,
+      "date":'09 Sep 2023',
+      "module":"Supplier Intelligence",
+      "status":"completed"
+    },
+    {
+      "chatid":345,
+      "date":'09 Sep 2023',
+      "module":"Pending",
+      "status":"completed"
+    },
+    {
+      "chatid":123,
+      "date":'09 Sep 2023',
+      "module":"Supplier Intelligence",
+      "status":"completed"
+    },
+    {
+      "chatid":234,
+      "date":'09 Sep 2023',
+      "module":"Supplier Intelligence",
+      "status":"completed"
+    },
+    {
+      "chatid":345,
+      "date":'09 Sep 2023',
+      "module":"Pending",
+      "status":"pending"
+    },
+    {
+      "chatid":123,
+      "date":'09 Sep 2023',
+      "module":"Supplier Intelligence",
+      "status":"completed"
+    },
+    {
+      "chatid":234,
+      "date":'09 Sep 2023',
+      "module":"Supplier Intelligence",
+      "status":"completed"
+    },
+    {
+      "chatid":345,
+      "date":'09 Sep 2023',
+      "module":"Pending",
+      "status":"completed"
+    }
+  ];
   constructor(
     public router: Router
-
   ) { }
 
   ngOnInit(): void {
