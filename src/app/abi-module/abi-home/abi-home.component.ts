@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./abi-home.component.scss']
 })
 export class AbiHomeComponent implements OnInit {
-
+  query_:any;
   constructor(
     public router:Router
   ) { }
@@ -15,7 +15,9 @@ export class AbiHomeComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  goChatRm(){
+  goChatRm(q:any){
+    console.log(q)
+    localStorage.setItem("message_to_onereach", q)
     this.router.navigate(['/chat-rm']);
   }
 

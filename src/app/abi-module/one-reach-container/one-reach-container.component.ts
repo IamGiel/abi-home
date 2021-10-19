@@ -7,7 +7,9 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
   styleUrls: ['./one-reach-container.component.scss']
 })
 export class OneReachContainerComponent implements OnInit {
-  url: string = 'https://chat.staging.onereach.ai/GapF3hg0QZ-V3pVTbzuZQA/0yb4400'; // abi v2
+
+  test_token = "test_token";
+  url: string = 'https://chat.staging.onereach.ai/GapF3hg0QZ-V3pVTbzuZQA/abi_v3?loader=light'; // abi v2
   urlSafe!: SafeResourceUrl;
   constructor(
     private sanitizer: DomSanitizer,
@@ -17,7 +19,8 @@ export class OneReachContainerComponent implements OnInit {
     // this.urlSafe = this.sanitizer.bypassSecurityTrustResourceUrl(
     //   this.url + '?token=' + encodeURIComponent(this.localStorageService.retrieve('accessToken'))
     // );
-    this.urlSafe = this.sanitizer.bypassSecurityTrustResourceUrl(this.url)
+    console.log(localStorage.getItem('message_to_onereach'));
+    this.urlSafe = this.sanitizer.bypassSecurityTrustResourceUrl(this.url + `?token=${this.test_token}` + `?message=${localStorage.getItem('message_to_onereach')}`)
   }
 
 }
