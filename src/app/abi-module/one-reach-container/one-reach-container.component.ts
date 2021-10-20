@@ -32,7 +32,7 @@ export class OneReachContainerComponent implements OnInit, AfterViewInit {
     if (!this.there) {
       setTimeout(() => {
         this.showLoader = false;
-      }, 12000);
+      }, 10000);
     }
     console.log(localStorage.getItem('message_to_onereach'));
     this.urlSafe = this.sanitizer.bypassSecurityTrustResourceUrl(this.url + `?token=${this.test_token}` + `?message=${localStorage.getItem('message_to_onereach')}`)
