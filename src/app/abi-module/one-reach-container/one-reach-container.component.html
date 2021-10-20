@@ -1,17 +1,22 @@
 <div class="onereach_container">
-    <div class="upper">
-        <div class="one_col_top">
-            <div class="greet"><p class="greet_p">This is Abi, your digital assistant</p></div>
-            <div class="cl"><img src="../../../assets/img/dash.svg" alt="dash"></div>
-        </div>
-        <div [ngClass]="{hide: showLoader === true}" class="one_col_bottom">
-            <div id="iFrameContainer">
-                <iframe id="theFrame" width="400px" height="300px" frameBorder="0" [src]="urlSafe"></iframe>
-            </div>  
-        </div>
-
-        <div [ngClass]="{hide: showLoader === false}" class="spinner-border text-info" role="status">
-            <span class="sr-only">Loading...</span>
-          </div>
+  <div class="upper">
+    <div class="one_col_top">
+      <div class="greet">
+        <p class="greet_p">This is Abi, your digital assistant</p>
+      </div>
+      <div class="cl"><img src="../../../assets/img/dash.svg" alt="dash"></div>
     </div>
+    <div [ngClass]="{hide: showLoader === true}" class="one_col_bottom">
+      <div id="iFrameContainer">
+        <iframe id="theFrame" width="400px" height="300px" frameBorder="0" [src]="urlSafe"></iframe>
+       
+      </div>
+    </div>
+    <div class="goHere"  #scrollMe style="overflow: scroll; height: 10px;"></div>
+    <div [ngClass]="{hide: showLoader === false}" class="spinner-border text-info" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+
+
+  </div>
 </div>
