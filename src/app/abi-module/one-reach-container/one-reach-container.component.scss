@@ -1,31 +1,49 @@
 .onereach_container {
-    display: flex;
-    flex-direction: column;
-    width: 917px;
-    height: 980px;
+  display: flex;
+  flex-direction: column;
+  width: 917px;
+  height: 980px;
 }
+
 .one_col_top {
-    display: flex;
-    flex-direction: row;
-    border-bottom: 1px solid;
-    border-color: lightgrey;
-    padding: 0px 28px 0px 28px;}
-.greet {
-    flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid;
+  border-color: lightgrey;
+  padding: 0px 28px 0px 28px;
 }
+
+.greet {
+  flex-grow: 1;
+}
+
 .greet_p {
-    font-family: Inter;
-font-style: normal;
-font-weight: 500;
-font-size: 18px;
-line-height: 32px;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 32px;
 }
 
 .cl {
-    cursor: pointer;
+  cursor: pointer;
 }
-#iFrameContainer, #theFrame {
+
+#iFrameContainer,
+#theFrame {
+  position: relative;
+  width: 917px;
+  min-height: 917px;
+}
+
+.hide {
+  visibility: hidden;
+}
+.spinner-border {
+    position: absolute;
+    top: 300px;
+    right: 49%;
+}
+.upper {
     position: relative;
-    width: 917px;
-    min-height: 917px;
-  }
+}
