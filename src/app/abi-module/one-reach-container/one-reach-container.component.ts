@@ -39,7 +39,7 @@ export class OneReachContainerComponent implements OnInit, AfterViewInit {
     setTimeout(() => {
       this.showLoader = false;
       this.scrollToBottom()
-    }, 10000);
+    }, 12000);
   }
 
   scrollToBottom(): void {
