@@ -1,6 +1,13 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { FormBuilder } from '@angular/forms';
+import {
+  Component,
+  OnInit
+} from '@angular/core';
+import {
+  Router
+} from '@angular/router';
+import {
+  FormBuilder
+} from '@angular/forms';
 
 
 @Component({
@@ -9,29 +16,41 @@ import { FormBuilder } from '@angular/forms';
   styleUrls: ['./abi-home.component.scss']
 })
 export class AbiHomeComponent implements OnInit {
-  query_:any;
+  query_: any;
   checkoutForm = this.formBuilder.group({
     query: '',
   });
   constructor(
-    public router:Router,
+    public router: Router,
     private formBuilder: FormBuilder,
 
-  ) { }
+  ) {}
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
-  goChatRm(q:any){
+  goChatRm(q: any) {
     q.preventDefault()
     console.log(q)
     localStorage.setItem("message_to_onereach", q)
-  
+
   }
   onSubmit(): void {
-    // Process checkout data here
-    console.warn('Your order has been submitted', this.checkoutForm.value.query);
+    let date = new Date();
+    // console.log(date.toLocaleDateString());
+
+    console.warn('your form has been submitted', this.checkoutForm.value.query);
     localStorage.setItem("message_to_onereach", this.checkoutForm.value.query)
+
+    let chat_data:any = {};
+    chat_data.question = this.checkoutForm.value.query;
+    chat_data.date = `${date.getUTCDate()} ${date.toLocaleString('en-us',{month:'short', year:'numeric'})}`;
+    chat_data.status = "pending";
+    chat_data.id = 1;
+
+    console.log(chat_data)
+
+    localStorage.setItem("chats", JSON.stringify(chat_data));
+
     this.router.navigate(['/chat-rm']);
     this.checkoutForm.reset();
   }

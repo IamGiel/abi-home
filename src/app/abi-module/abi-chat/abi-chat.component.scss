@@ -1,5 +1,5 @@
 .nav-sub-inner {
-//   flex-grow: 1;
+  //   flex-grow: 1;
   display: flex;
 }
 
@@ -103,10 +103,12 @@
   line-height: 19px;
   letter-spacing: 0px;
   text-align: left;
+  white-space: nowrap;
 
 }
 
-.ch_dt, .ch_dt_m {
+.ch_dt,
+.ch_dt_m {
   font-family: Inter;
   font-size: 13px;
   font-style: normal;
@@ -121,7 +123,7 @@
 }
 
 .ch_dt_m {
-    padding: 0px 12px;
+  padding: 0px 12px;
 
 }
 
@@ -160,7 +162,7 @@
   line-height: 20px;
 
   position: relative;
-//   top: -10px;
+  //   top: -10px;
 }
 
 .ch_status-comp {
@@ -179,4 +181,80 @@
   color: #EF4444;
   background: linear-gradient(0deg, rgba(239, 68, 68, 0.1), rgba(239, 68, 68, 0.1)), #FFFFFF;
   border-radius: 6px;
+}
+
+
+.zero_state {
+  background: lightgrey;
+  display: flex;
+  flex-direction: column;
+  grid-gap: 23px;
+  gap: 12px;
+  min-height: 919px;
+  justify-content: flex-start;
+}
+
+.zs_img,
+.zs_p {
+  display: flex;
+  justify-content: center;
+}
+
+.zs_p {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  /* identical to box height, or 119% */
+
+  text-align: center;
+
+  color: #22133E;
+
+  opacity: 0.7;
+}
+
+.zs_img {
+  height: 30.25px;
+  margin-top: 160px;
+}
+
+#ch_img {
+  filter: invert(46%) sepia(11%) saturate(884%) hue-rotate(192deg) brightness(87%) contrast(90%);
+  height: 30px;
+}
+
+
+.effect8
+{
+    position:relative;
+    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+       -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+            box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+.effect8:before, .effect8:after
+{
+  content:"";
+    position:absolute;
+    z-index:-1;
+    -webkit-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    -moz-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    box-shadow:0 0 20px rgba(0,0,0,0.8);
+    top:10px;
+    bottom:10px;
+    left:0;
+    right:0;
+    -moz-border-radius:100px / 10px;
+    border-radius:100px / 10px;
+}
+.effect8:after
+{
+  right:10px;
+    left:auto;
+    -webkit-transform:skew(8deg) rotate(3deg);
+       -moz-transform:skew(8deg) rotate(3deg);
+        -ms-transform:skew(8deg) rotate(3deg);
+         -o-transform:skew(8deg) rotate(3deg);
+            transform:skew(8deg) rotate(3deg);
 }
