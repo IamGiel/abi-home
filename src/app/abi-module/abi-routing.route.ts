@@ -33,6 +33,6 @@ export const AbiRoute: Route[] = [
   {
    path: 'chat-rm',
    component: AbiChatComponent
-},
+}
 
 ];

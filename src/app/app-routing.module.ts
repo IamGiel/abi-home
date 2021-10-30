@@ -5,7 +5,7 @@ const routes: Routes = [
   { path: '', redirectTo: '/', pathMatch: 'full' },
   {
     path: 'abi-ai',
-    loadChildren: () => import('./abi-module/abi.module').then(m => m.TestModuleModule)
+    loadChildren: () => import('./abi-module/abi.module').then(m => m.AbiModule)
   },
   {
     path: 'home',

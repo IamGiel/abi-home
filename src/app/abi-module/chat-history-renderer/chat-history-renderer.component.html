@@ -1,0 +1,11 @@
+<div class="content">
+  <!-- <h1>{{messages_array|json}}</h1> -->
+  <div *ngFor="let msg of messages_array.data" [ngClass]="msg.message ? 'bubble_alignment_bot' : 'bubble_alignment_user'">
+    <!-- <p>{{msg | json}}</p> -->
+
+    <div [ngClass]='msg.message ? "bot" : "user"'>
+      <p>{{msg.message ? msg.message : msg.answer.message}}</p>
+    </div>
+    
+  </div>
+</div>

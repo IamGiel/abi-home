@@ -5,8 +5,8 @@
         <img src="https://raw.githubusercontent.com/Selva1994/Host/main/Attention%403x.svg" alt="abi">
     </div>
     <p class="ch-now">Chat with Abi now</p>
-    <form style="position: relative;" [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
-        <input class="the-input" type="text" formControlName="query" placeholder="Enter your query" #query> <button class="start-btn" type="submit">Start chat</button>
+    <form style="position: relative;" [formGroup]="checkoutForm" (ngSubmit)="onSubmit()" >
+        <input class="the-input" type="text" formControlName="query" placeholder="Enter your query" #query> <button class="start-btn" [ngClass]="{disabled: !checkoutForm.valid}" type="submit" [disabled]="!checkoutForm.valid" >Start chat</button>
     </form>
 </div>
 <div class="preview-container">

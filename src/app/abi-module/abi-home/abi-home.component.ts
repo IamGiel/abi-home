@@ -1,13 +1,18 @@
 import {
   Component,
+  OnDestroy,
   OnInit
 } from '@angular/core';
 import {
   Router
 } from '@angular/router';
 import {
-  FormBuilder
+  FormBuilder,
+  Validators
 } from '@angular/forms';
+import {
+  DataServiceService
+} from 'src/app/services/data-service.service';
 
 
 @Component({
@@ -15,14 +20,15 @@ import {
   templateUrl: './abi-home.component.html',
   styleUrls: ['./abi-home.component.scss']
 })
-export class AbiHomeComponent implements OnInit {
+export class AbiHomeComponent implements OnInit, OnDestroy {
   query_: any;
   checkoutForm = this.formBuilder.group({
-    query: '',
+    query: ["", Validators.required],
   });
   constructor(
     public router: Router,
     private formBuilder: FormBuilder,
+    private dataservice: DataServiceService
 
   ) {}
 
@@ -41,18 +47,28 @@ export class AbiHomeComponent implements OnInit {
     console.warn('your form has been submitted', this.checkoutForm.value.query);
     localStorage.setItem("message_to_onereach", this.checkoutForm.value.query)
 
-    let chat_data:any = {};
-    chat_data.question = this.checkoutForm.value.query;
-    chat_data.date = `${date.getUTCDate()} ${date.toLocaleString('en-us',{month:'short', year:'numeric'})}`;
-    chat_data.status = "pending";
-    chat_data.id = 1;
+    // let chat_data: any = {};
+    // chat_data.data = {};
 
-    console.log(chat_data)
+    // chat_data.data.question = this.checkoutForm.value.query;
+    // chat_data.data.date = `${date.getUTCDate()} ${date.toLocaleString('en-us',{month:'short', year:'numeric'})}`;
+    // chat_data.data.status = "pending";
+    // // data:
+    //   // date: "28 Oct 2021"
+    //   // question: "sdasd"
+    //   // status: "pending"
 
-    localStorage.setItem("chats", JSON.stringify(chat_data));
+    // console.log(chat_data)
+    // // this.dataservice.setModuleTagged(chat_data);
 
-    this.router.navigate(['/chat-rm']);
+    // localStorage.setItem("chats", JSON.stringify(chat_data));
+
+    this.router.navigate(['chat-rm']);
     this.checkoutForm.reset();
+  }
+
+  ngOnDestroy() {
+    this.dataservice.resetDataService();
   }
 
 

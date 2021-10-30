@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
-import { TestModuleModule } from './abi-module/abi.module';
+import { AbiModule } from './abi-module/abi.module';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 
 @NgModule({
@@ -15,7 +15,7 @@ import { TooltipModule } from 'ngx-bootstrap/tooltip';
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     RouterModule,
-    TestModuleModule,
+    AbiModule,
     TooltipModule
   ],
   providers: [],

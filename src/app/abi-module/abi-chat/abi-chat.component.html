@@ -13,47 +13,65 @@
             <span style="position: relative;"><img id="cdown" src="../../../assets/img/chevron-down.svg"
                 alt="chevron-down"></span></div>
         </div>
-        <div *ngIf="chatLength > 0" class="col-list">
-          <div class="chat-item-container" *ngFor="let chat of sortBy('chat.id', chats)">
+        <div *ngIf="!loader" class="col-list">
+          <div class="chat-item-container" *ngFor="let chat of chats" (click)="goToChatSnapShot(chat)" [ngClass]="{isSelected: chat.id == isSlected_id}">
 
             <!-- <pre>{{chat | json}}</pre> -->
-            <div class="row_l" [tooltip]="chat.data.ch.question" triggers="mouseenter:mouseleave">
-                <div class="row_sub_l">
-                    <span class="dot_sp">
-                        <div class="theDot"></div>
-                    </span>
-                <p class="ch_id">Chat #{{chat.id}}</p> 
-                </div>
-                <div class="row_sub_l">
-                    <p class="ch_dt">{{chat.data.ch.date}}</p>
-                </div>
+
+            <div class="row_l" [tooltip]="chat.data.intent.question" triggers="mouseenter:mouseleave">
+              <div class="row_sub_l">
+                <span class="dot_sp">
+                  <div class="theDot"></div>
+                </span>
+                <p class="ch_id">Chat #{{chat.id}}</p>
+              </div>
+              <div class="row_sub_l">
+                <p class="ch_dt">{{convertTimeStamp(chat.id)}}</p>
+              </div>
             </div>
 
-            <div class="row_r" >
-                <div class="row_sub_l">
-                    
-                </div>
-                <div class="row_sub_l ch_stat" [ngClass]="{'ch_status-comp':chat.data.ch.status === 'completed', 'ch_status-pen':chat.data.ch.status === 'pending', 'ch_status-term':chat.data.ch.status === 'ended'}" [tooltip]="chat.data.ch.status" triggers="mouseenter:mouseleave">
-                    <p class="ch_dt_m">{{chat.data.mod ? chat.data.mod : "..."}}</p>
-                </div>
+            <div class="row_r">
+              <div class="row_sub_l">
+
+              </div>
+              <div class="row_sub_l ch_stat"
+                [ngClass]="{'ch_status-comp':false, 'ch_status-pen':'pending' === 'pending', 'ch_status-term':false}"
+                [tooltip]="chat.data.intent.contextName" triggers="mouseenter:mouseleave">
+                <p class="ch_dt_m">{{chat.data.intent.response ? chat.data.intent.response : "Not Defined"}}</p>
+              </div>
             </div>
           </div>
         </div>
-        <div *ngIf="chatLength == 0" class="col-list zero_state" >
-            <div class="zs_img">
-                <img id="ch_img" src="../../../assets/img/chat.svg" alt="chat-empty">
-            </div>
-            <div class="zs_p">
-                <span>You have no chat history</span>
-            </div>
+        <div *ngIf="(chats.length == 0) && (loader == false)" class="col-list zero_state">
+          <div class="zs_img">
+            <img id="ch_img" src="../../../assets/img/chat.svg" alt="chat-empty">
+          </div>
+          <div class="zs_p">
+            <span>You have no chat history</span>
+          </div>
+
+        </div>
+        <div *ngIf="loader == true" class="col-list loading_state">
+          <div class="zs_img">
+            <img id="ch_img" src="../../../assets/img/chat.svg" alt="chat-empty">
+          </div>
+          <div class="zs_p">
+            <span>Loading chats...</span>
+          </div>
 
         </div>
 
       </div>
 
-      <div class="sub-con onereach_container">
+      
+
+      <div *ngIf="chat_rendered" class="sub-con onereach_container">
         <app-one-reach-container></app-one-reach-container>
       </div>
+      <div *ngIf="!chat_rendered" class="sub-con-rwc">
+        <app-chat-history-renderer [messages_array]="chat_history" ></app-chat-history-renderer>
+      </div>
+
     </div>
 
   </div>

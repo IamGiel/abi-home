@@ -35,9 +35,12 @@
   line-height: 20px;
 }
 
-.sub-con {
+.sub-con, .sub-con-rwc {
   display: flex;
   flex-direction: row;
+}
+.sub-con-rwc {
+  margin: 51px 35px;
 }
 
 #cdown {
@@ -56,6 +59,8 @@
   padding-bottom: 12px;
   display: flex;
   flex-direction: column;
+//   border: 1px solid lightgrey;
+
 }
 
 .col-list-t {
@@ -68,6 +73,8 @@
 .col-list {
   max-height: 919px;
   overflow-x: hidden;
+  border: 1px solid lightgrey;
+
 }
 
 .chat-item-container {
@@ -78,6 +85,9 @@
   padding: 12px 35px;
   border-bottom: 1px solid lightgrey;
   cursor: pointer;
+}
+.chat-item-container:hover {
+  background: #DBCDE8;
 }
 
 .row_l {
@@ -184,15 +194,20 @@
 }
 
 
-.zero_state {
-  background: lightgrey;
+.zero_state, .loading_state {
+//   background: lightgrey;
   display: flex;
   flex-direction: column;
   grid-gap: 23px;
   gap: 12px;
   min-height: 919px;
   justify-content: flex-start;
+  border: 1px solid lightgrey;
+
 }
+// .loading_state {
+//     border: 1px solid lightgrey;
+// }
 
 .zs_img,
 .zs_p {
@@ -257,4 +272,8 @@
         -ms-transform:skew(8deg) rotate(3deg);
          -o-transform:skew(8deg) rotate(3deg);
             transform:skew(8deg) rotate(3deg);
+}
+
+.isSelected {
+  background-color: #DBCDE8;
 }

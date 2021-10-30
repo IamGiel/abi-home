@@ -1,0 +1,33 @@
+.content { 
+    white-space: pre-line;
+    width: 831px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.bot, .user {
+    font-size: 16px;
+    font-family: inter;
+    width: 45%;
+    display: flex;
+    flex-direction: row;
+    padding: 15px;
+    justify-content: flex-start;
+}
+.bot {
+    background: #6F22FE;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.27);
+    border-radius: 7px;
+    color: white;
+}
+.user {
+    background: #FFFFFF;
+box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+border-radius: 7px;
+color: black;
+}
+
+.bubble_alignment_user {
+    display: flex;
+    justify-content: flex-end;
+}
