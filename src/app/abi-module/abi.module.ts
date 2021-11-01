@@ -16,6 +16,7 @@ import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { HttpClientModule } from '@angular/common/http';
 import { ChatHistoryRendererComponent } from './chat-history-renderer/chat-history-renderer.component';
 import { AbiChatComponent } from './abi-chat/abi-chat.component';
+import { ChatsComponent } from './chats/chats.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { AbiChatComponent } from './abi-chat/abi-chat.component';
     FilesComponent,
     PreviewComponent,
     OneReachContainerComponent,
-    ChatHistoryRendererComponent
+    ChatHistoryRendererComponent,
+    ChatsComponent
     
   ],
   imports: [
