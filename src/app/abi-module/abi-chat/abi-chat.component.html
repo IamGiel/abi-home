@@ -42,7 +42,7 @@
             </div>
           </div>
         </div>
-        <div *ngIf="(chats.length == 0) && (loader == false)" class="col-list zero_state">
+        <div *ngIf="(chats.length == 0)" class="col-list zero_state">
           <div class="zs_img">
             <img id="ch_img" src="../../../assets/img/chat.svg" alt="chat-empty">
           </div>
@@ -51,7 +51,7 @@
           </div>
 
         </div>
-        <div *ngIf="loader == true" class="col-list loading_state">
+        <div *ngIf="(loader == true) && (chats.length > 0)" class="col-list loading_state">
           <div class="zs_img">
             <img id="ch_img" src="../../../assets/img/chat.svg" alt="chat-empty">
           </div>

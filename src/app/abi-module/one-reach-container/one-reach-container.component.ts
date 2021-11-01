@@ -107,8 +107,18 @@ export class OneReachContainerComponent implements OnInit, AfterViewInit, OnDest
           this.saveChats(this.construct_obj).subscribe(res=> {
             console.log(res)
           });
+          this.deleteChatDataRecord();
       }
      
+    })
+  }
+  deleteChatDataRecord(){
+    // use this to delete the temporary chat detail history
+    let onereachChatsURl = "https://em.staging.api.onereach.ai/http/19aa45de-1834-419f-95de-95536f3b9940/sub/http/v1/chat_history_api";
+    this.http.delete < any > (onereachChatsURl, {
+      'headers': this.chat_headers
+    }).subscribe(data => {
+      console.log(data)
     })
   }
   scrollToBottom(): void {
