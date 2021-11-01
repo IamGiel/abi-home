@@ -5,9 +5,9 @@ import { RouterModule } from '@angular/router';
 import { AbiRoute } from './abi-routing.route';
 import { AbiHomeComponent } from './abi-home/abi-home.component';
 import { AbiComponent } from './abi.component';
-import { ReportsComponent } from './reports/reports.component';
-import { FilesComponent } from './files/files.component';
-import { PreviewComponent } from './preview/preview.component';
+import { ReportsComponent } from './nav/reports/reports.component';
+import { FilesComponent } from './nav/files/files.component';
+import { PreviewComponent } from './nav/preview/preview.component';
 import { OneReachContainerComponent } from './one-reach-container/one-reach-container.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
@@ -16,7 +16,7 @@ import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { HttpClientModule } from '@angular/common/http';
 import { ChatHistoryRendererComponent } from './chat-history-renderer/chat-history-renderer.component';
 import { AbiChatComponent } from './abi-chat/abi-chat.component';
-import { ChatsComponent } from './chats/chats.component';
+import { ChatsComponent } from './nav/chats/chats.component';
 
 @NgModule({
   declarations: [

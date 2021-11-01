@@ -2,8 +2,8 @@ import {Route} from '@angular/router';
 import { AbiChatComponent } from './abi-chat/abi-chat.component';
 import { AbiHomeComponent } from './abi-home/abi-home.component';
 import { AbiComponent } from './abi.component';
-import { FilesComponent } from './files/files.component';
-import { ReportsComponent } from './reports/reports.component';
+import { FilesComponent } from './nav/files/files.component';
+import { ReportsComponent } from './nav/reports/reports.component';
 
 // const routes: Routes = [];
 export const AbiRoute: Route[] = [
