@@ -210,7 +210,11 @@ export class AbiChatComponent implements OnInit, OnDestroy {
       }
 
 
-    })
+    },
+    err=> {
+      console.log(err)
+    }
+    )
   }
 
   sortBy(prop: any, data) {
