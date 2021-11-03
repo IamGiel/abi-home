@@ -32,7 +32,13 @@ export class FetchMethodsService {
   }
   // chat_history_api record
   fetch_chatHistory_get(){
-    return this.http.get < any > (this.chats_history_url, {
+    return this.http.get <any> (this.chats_history_url, {
+      'headers': this.chat_headers
+    })
+  }
+
+  fetch_chatHistory_delete(){
+    return this.http.delete <any> (this.chats_history_url, {
       'headers': this.chat_headers
     })
   }

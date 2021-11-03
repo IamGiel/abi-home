@@ -16,7 +16,7 @@
         <div *ngIf="!loader" class="col-list">
           <div class="chat-item-container" *ngFor="let chat of chats" (click)="goToChatSnapShot(chat)" [ngClass]="{isSelected: chat.id == isSlected_id}">
 
-            <pre>{{chat | json}}</pre>
+            <!-- <pre>{{chat | json}}</pre> -->
 
             <div class="row_l" [tooltip]="chat.data.intent.question" triggers="mouseenter:mouseleave">
               <div class="row_sub_l">
@@ -51,7 +51,7 @@
           </div>
 
         </div>
-        <div *ngIf="(loader == true) && (chats.length > 0)" class="col-list loading_state">
+        <div *ngIf="(loader == true)" class="col-list loading_state">
           <div class="zs_img">
             <img id="ch_img" src="../../../assets/img/chat.svg" alt="chat-empty">
           </div>

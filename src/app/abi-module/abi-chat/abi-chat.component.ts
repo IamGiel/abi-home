@@ -47,7 +47,10 @@ export class AbiChatComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.selected_nav = "chat";
-    this.getChats();
+    setTimeout(() => {
+      this.getChats();
+    }, 12000);
+    
 
   }
   goChat(clicked_item: any) {
@@ -65,7 +68,7 @@ export class AbiChatComponent implements OnInit, OnDestroy {
 
   getChats() {
     this.fetchData.fetch_chatsData_get().subscribe(data => {
-      console.log("get chats from abi-chat ", data)
+      console.log("get cha ", data)
       if (data.items) {
         this.loader = false;
         data.items.forEach(k => {
@@ -87,6 +90,8 @@ export class AbiChatComponent implements OnInit, OnDestroy {
       }
     }
     )
+
+    console.log(this.loader)
   }
 
   sortBy(prop: any, data) {
@@ -99,8 +104,8 @@ export class AbiChatComponent implements OnInit, OnDestroy {
   }
 
   goToChatSnapShot(chat_item){
-    console.log(chat_item.data.transcripts)
-    console.log(chat_item.id)
+    // console.log(chat_item.data.transcripts)
+    // console.log(chat_item.id)
     this.isSlected_id  = chat_item.id;
     this.chat_rendered = false;
     this.chat_history = chat_item.data.transcripts;

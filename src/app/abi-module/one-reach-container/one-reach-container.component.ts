@@ -61,6 +61,7 @@ export class OneReachContainerComponent implements OnInit, AfterViewInit, OnDest
   }
 
   getModuleTagged() {
+    // post was triggered in the NLP module in onereach, we will collect it here
     this.fetchData.fetch_moduleTriggered_get().subscribe(data => {
       console.log(data)
       
@@ -79,19 +80,29 @@ export class OneReachContainerComponent implements OnInit, AfterViewInit, OnDest
     // SAVE RECORD TO CHATS_ARR TABLE
     this.fetchData.fetch_chatsData_Post(payload).subscribe(res=>{
       console.log("saving to chats_arr... ", res)
+      setTimeout(() => {
+        this.fetchData.fetch_chatHistory_delete().subscribe(del=>{
+          console.log("deleting temp chat hist record... ", del)
+        })
+      }, 5000);
     })
   }
   getOneReachChatsArray(){
     // GET CHAT_HISTORY RECORD
     this.fetchData.fetch_chatHistory_get().subscribe(data => {
-      console.log(JSON.parse(data.items[0]._source.data))
-      if(JSON.parse(data.items[0]._source.data)){
-        let ch_arr = JSON.parse(data.items[0]._source.data);
+      console.log(data)
+      // console.log(JSON.parse(data.items[0]._source.data))
+      if(data.items){
+        // let ch_arr = JSON.parse(data.items[0]._source.data);
+        let ch_arr = data.items[0]._source.data
         this.construct_obj.data.transcripts = ch_arr;
         console.log("ADDING CHAT to RECORDS ", this.construct_obj)
           this.saveChats(this.construct_obj);
       }
      
+    },
+    err=> {
+      console.log(err)
     })
   }
 
