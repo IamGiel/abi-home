@@ -4,8 +4,8 @@
     <!-- <p>{{msg | json}}</p> -->
 
     <div [ngClass]='msg.message ? "bot" : "user"'>
-      <p>{{msg.message ? msg.message : msg.answer.message}}</p>
+      <p style="overflow: hidden;">{{msg.message ? msg.message : msg.answer.message}}</p>
     </div>
     
   </div>
-</div>
+</div> 
